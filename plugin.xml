@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com-plugin-ibeacon" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>IBeacon</name>
+    <js-module name="IBeacon" src="www/IBeacon.js">
+        <clobbers target="IBeacon" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="IBeacon">
+                <param name="android-package" value="com.plugin.ibeacon.IBeacon" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+        </config-file>
+        <source-file src="src/android/IBeacon.java" target-dir="src/com/plugin/ibeacon/IBeacon" />
+    </platform>
+</plugin>

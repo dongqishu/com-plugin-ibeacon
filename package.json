@@ -1,5 +1,5 @@
 {
-  "name": "com.plugin.ibeacon",
+  "name": "com-plugin-ibeacon",
   "version": "1.0.0",
   "description": "蓝牙信标",
   "main": "index.js",
